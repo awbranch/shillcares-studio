@@ -2,6 +2,7 @@ import grantee from './grantee'
 import grant from './grant'
 import board from './board'
 import endowment from './endowment'
+import story from './story'
 import blockContent from './blockContent'
 
 export const schemaTypes = [
@@ -10,6 +11,7 @@ export const schemaTypes = [
   grant,
   board,
   endowment,
+  story,
 
   // Other types
   blockContent,
