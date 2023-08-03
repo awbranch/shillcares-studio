@@ -11,6 +11,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'location',
@@ -21,17 +22,31 @@ export default defineType({
       name: 'date',
       title: 'Date',
       type: 'date',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'text',
       title: 'Text',
       type: 'blockContent',
+      validation: Rule => Rule.required()
     }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      validation: Rule => Rule.required(),
+      options: {
+        source: (doc) => (`${doc.date} ${doc.title}`),
+        maxLength: 80
+      }
+    }),
+
   ],
   preview: {
     select: {

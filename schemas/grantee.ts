@@ -11,6 +11,7 @@ export default defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'url',
@@ -21,11 +22,13 @@ export default defineType({
       name: 'logo',
       title: 'Logo',
       type: 'image',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'blockContent',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'order',
