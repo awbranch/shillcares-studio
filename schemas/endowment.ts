@@ -21,7 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'note',
-      title: 'Note',
+      title: 'Entry Note',
       type: 'text',
       rows: 5,
       validation: Rule => Rule.required()
