@@ -11,7 +11,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule: any) => Rule.required()
     }),
     defineField({
       name: 'location',
@@ -29,6 +29,11 @@ export default defineType({
       title: 'Image',
       type: 'image',
       validation: Rule => Rule.required()
+    }),
+    defineField({
+      name: 'imageUrl',
+      title: 'Image URL',
+      type: 'url',
     }),
     defineField({
       name: 'text',

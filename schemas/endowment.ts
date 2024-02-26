@@ -11,20 +11,19 @@ export default defineType({
       name: 'balance',
       title: 'Balance',
       type: 'number',
-      validation: Rule => Rule.required()
+      validation: (Rule: any) => Rule.required()
     }),
     defineField({
       name: 'date',
       title: 'Date',
       type: 'date',
-      validation: Rule => Rule.required()
+      validation: (Rule: any) => Rule.required()
     }),
     defineField({
       name: 'note',
       title: 'Entry Note',
       type: 'text',
       rows: 5,
-      validation: Rule => Rule.required()
     }),
   ],
   preview: {
