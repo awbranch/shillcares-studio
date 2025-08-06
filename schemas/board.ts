@@ -20,6 +20,11 @@ export default defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
+      name: 'linkedInUrl',
+      title: 'LinkedIn URL',
+      type: 'url',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
